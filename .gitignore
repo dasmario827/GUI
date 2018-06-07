@@ -1,0 +1,23 @@
+# Build Files #
+bin
+target/.generated/
+target/classes/
+target/generated-sources/
+target/generated-resources/
+target/m2e-wtp/
+target/maven-archiver/
+target/maven-status/
+target/DemoApp-1.0/
+target/ws-updated/
+# Eclipse Project Files #
+
+.classpath
+.project
+.settings
+eclipse-workspace
+# IntelliJ IDEA Files #
+
+*.iml
+*.ipr
+*.iws
+*.idea
