@@ -49,7 +49,7 @@ import com.vaadin.ui.components.grid.HeaderRow;
 @SpringUI
 @Title("GUI Vaadin Demo")
 @SuppressWarnings("serial")
-@Theme("mytheme")
+@Theme("demoapptheme")
 public class DemoUI extends UI {
 
 	private static final int FIRST_PAGE = 1;
@@ -67,9 +67,10 @@ public class DemoUI extends UI {
 	@Configuration
 	@EnableVaadin
 	public static class DemoConfiguration {
+		
 
 	}
-
+   
 	@Override
 	protected void init(VaadinRequest request) {
 		mainLayout = new VerticalLayout();
@@ -148,7 +149,6 @@ public class DemoUI extends UI {
 			switch (entry.getKey().getColumnDataType()) {
 			case NUMBER:
 				TextField tfAsNumber = new TextField();
-				// tfAsNumber.setMaxLength(entry.getKey().getColumnSize());
 				c.setEditorBinding(binder.forField(tfAsNumber).asRequired("Required")
 						.withConverter(new StringToIntegerConverter("Must be Integer"))
 						.bind(v -> Integer.parseInt(v.get(entry.getKey()) + ""), (k, v) -> k.put(entry.getKey(), v)));
@@ -251,7 +251,7 @@ public class DemoUI extends UI {
 			// @TODO
 			// For Sure this will be handle not like this at all
 			exp.printStackTrace();
-		}
+		}  
 	}
 
 	private Pagination createPagination(long total, int page, int limit) {
