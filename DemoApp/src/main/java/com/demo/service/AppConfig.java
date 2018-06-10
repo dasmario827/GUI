@@ -29,8 +29,6 @@ public class AppConfig{
 	private String url;
 	@Value("${jdbc.datasource.username}")
 	private String username;
-	@Value("${jdbc.datasource.password}")
-	private String password;
 	@Value("${jdbc.datasource.driverClassName}")
 	private String driver;
 	@Value("${jdbc.datasource.validationQuery}")
